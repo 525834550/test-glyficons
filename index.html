@@ -17,34 +17,72 @@
 </head>
 <body>
 
-    <div class="header">       
-        <h1>EMPLOYEE MANAGER</h1> 
+    <div class="header">
+        <div class="header__margin">
+            <img alt="emp_logo" class="logo" src="./images/logo.png">
+            <span id="seletedAccount"></span>
+            <ul id="userMenu" class="pull-right">
+                <li><a href="#"><span class=""></span>admin@contoso.com</a></li>
+                <li><a href="#" class="cstm_signout"><span class=""></span>Log Out</a></li>
+            </ul>
+        </div>
     </div>
 
-  <!-- <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" class="Employee_display" /> -->
+<h1 id="page-mainTitle">Employee Managment</h1>
+<hr/>
+<br/>
 
 
- <div id="page-content-display"></div>
+    <form class="form">
+      <input class="form__search" type="text" name="search" placeholder="Search">
+    </form>
 
-<div class="panel-body">
-    <div id="employee-builder" class="employee">
-        <div class="row">
-            <div class="col-md-12">
-                    <div class="employee__home">
-                         <div class="clear"></div>
-                        <div class="panel panel-primary employee__home__histroy">                                        
-                                <div id="showData"></div>
+    <div class="createempBtn buttontoggle pull-right" data-target="#createnewemp" data-toggle="modal">
+        <button type="button" class="btn btn-primary">Add New</button>
+    </div>
 
 
-                        </div>
-                    </div>
-                    <!--end of Employee home-->
+<div class="panel panel-primary emp-model">
+    <div id="showData"></div>
+</div>
+
+
+<div class="modal fade" id="createnewemp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="empReview">
+                <div class="emp_title">
+                    <h4 class="modal-title">Create New Employee <span class="closecreatenewemp pull-right" data-dismiss="modal">X</span></h4>
+                </div>
+                <div class="modal-body">
+                        <form>
+                            <div id="Employee_new">
+                                <label>First Name</label>
+                                <input type="text" class="FirstName_new" placeholder="First Name">
+                                <label>Last Name:</label>
+                                <input type="text" class="LastName_new" placeholder="Last Name">
+                                <label>Gender:</label>
+                                <input type="text" class="Gender_new" placeholder="Gender">
+                                <label>Email:</label>
+                                <input type="text" class="Email_new" placeholder="Email">
+                                <label>Phone:</label>
+                                <input type="text" class="Phone_new" placeholder="Phone">
+                                <label>State:</label>
+                                <input type="text" class="State_new" placeholder="State">                                                          
+                             </div>
+
+                        </form>
+                </div>
             </div>
 
+            <div class="continueBtn pull-right">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
             </div>
+            <div class="clear"></div>
         </div>
     </div>
 </div>
+
 
 
 </body>
@@ -53,67 +91,7 @@
 <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./scripts/main.js"></script>
-<script type="text/javascript" src="./scripts/employee.js"></script>
+
 
 
 </html>
-
-
-                                <!--     <table class="employee__home__List table" id="EmpModel">
-                                        <thead>
-                                            <tr>
-                                                    <th  class="employee-id centerHeading">employee Id</th>   
-                                                     <th class="employee-name centerHeading">employee Name</th>  
-                                                      <th class="employee-category centerHeading">category</th>
-                                                    <th class="Actions centerHeading">Actions</th>
-                                              
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="tr_item">
-                                                <td class="emp__id"></td>                 
-                                                <td class="emp__name"></td>                         
-                                                <td class="glyphicon glyphicon-pencil"><span class="glyphicon glyphicon-trash"></span></td>
-                                            </tr>
-                                           
-                                        </tbody>
-                                    </table>
- -->
-
-
-
-                                        <!-- <table class="employee__home__List table">
-                                            <thead>
-                                                <tr class="">
-                                                    <th class="employee-name">employee Name</th>
-                                                    <th class="employee-id">employee Id</th>      
-                                                    <th class="Actions">Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="hidden">
-                                                    <td><a href="#" class="displaySaved">New Saved Proforma</a></td>
-                                                    <td>XXX-001</td>                                                
-                                                    <td class="glyphicon glyphicon-pencil"><span class="glyphicon glyphicon-trash"></span></td>
-                                                </tr> 
-                                                 <tr>
-                                                    <td>Randy</td>                 
-                                                    <td>001</td>
-                                                    
-                                                    <td class="glyphicon glyphicon-pencil"><span class="glyphicon glyphicon-trash"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Santra</td>                 
-                                                    <td>001</td>
-                                                    
-                                                    <td class="glyphicon glyphicon-pencil"><span class="glyphicon glyphicon-trash"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>David</td>                 
-                                                    <td>001</td>
-                                                    
-                                                    <td class="glyphicon glyphicon-pencil"><span class="glyphicon glyphicon-trash"></span></td>
-                                                </tr>
-                                               
-                                            </tbody>
-                                        </table>  -->
