@@ -1,0 +1,53 @@
+@include "FontAwesome";
+@include "glyphicons-halflings";
+
+$fontsize:12px;
+$lineheight:20px;
+$text-color:#fff;
+
+@mixin e($element)	{
+	&__#{$element}{
+		@content;
+	}
+}
+
+@mixin m($modifier){
+	&--#{$modifier}{
+		@content;
+	}
+}
+
+body {
+    font-size: $fontsize;
+}
+
+.tables{
+    background-color: #2846AA;
+    color: $text-color;
+    padding: 8px;
+    font-size: $fontsize;
+    font-weight: 400;
+    font-family: Helvetica;
+}
+
+.formcss{
+	font-size: $fontsize;
+    font-weight: normal;
+    line-height: $lineheight;
+}
+
+
+label, input, button, select, textarea, input.form-control {
+   @extend .formcss;
+}
+
+.table tr th{
+	@extend .tables;
+}
+
+
+.panel-body {
+    padding: 15px;
+}
+
+

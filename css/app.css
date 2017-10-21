@@ -1,0 +1,23 @@
+/*@font-face {
+    font-family: glyphicons;
+    src: url(../bootstrap/fonts/glyphicons-halflings-regular.ttf);
+}*/
+
+body {
+  font-size: 12px; }
+
+.tables, .table tr th {
+  background-color: #2846AA;
+  color: #fff;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Helvetica; }
+
+.formcss, label, input, button, select, textarea, input.form-control {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px; }
+
+.panel-body {
+  padding: 15px; }
